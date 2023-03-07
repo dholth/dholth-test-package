@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dholth_test_package"
+authors = [{ name = "Daniel Holth", email = "dholth@anaconda.com" }]
+description = "It prints hello!"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["example"]
+license = { text = "BSD-3-Clause" }
+classifiers = ["Programming Language :: Python :: 3"]
+dependencies = ["requests"]
+dynamic = ["version"]
+
+[project.scripts]
+dtp-print-hello = "dtp:print_hello"
+
+[tool.setuptools]
+packages = ["dtp"]
+
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
